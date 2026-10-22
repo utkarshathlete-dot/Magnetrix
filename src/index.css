@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-serif: 'Playfair Display', Georgia, Cambria, 'Times New Roman', Times, serif;
+    --color-base: #030712;
+    --color-electric: #6366f1;
+    --color-electric-accent: #8b5cf6;
+    --color-cta-warm: #ef4444;
+    --color-cta-warm-hover: #dc2626;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #000000;
+    color: #ffffff;
+    overflow-x: hidden;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.font-serif-italic {
+  font-family: var(--font-serif);
+  font-style: italic;
+}
+
+/* Accessible Light Theme Overrides */
+html.light body {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+html.light h1,
+html.light h2,
+html.light h3,
+html.light h4,
+html.light .text-white {
+  color: #0f172a !important;
+}
+
+html.light .text-neutral-200,
+html.light .text-neutral-300 {
+  color: #334155 !important;
+}
+
+html.light .text-neutral-400 {
+  color: #64748b !important;
+}
+
+html.light .bg-black\/40,
+html.light .bg-black\/50,
+html.light .bg-black\/55,
+html.light .bg-black\/60,
+html.light .bg-black\/70,
+html.light .bg-black\/80,
+html.light .bg-\[\#0a0a0a\]\/80,
+html.light .bg-neutral-950,
+html.light .bg-neutral-950\/80,
+html.light .bg-neutral-950\/90,
+html.light .bg-neutral-950\/95,
+html.light .bg-\[\#0c0c0c\]\/95,
+html.light .bg-\[\#0d0d0d\]\/95 {
+  background-color: rgba(255, 255, 255, 0.94) !important;
+  backdrop-filter: blur(20px) !important;
+}
+
+html.light .border-white\/10,
+html.light .border-white\/15,
+html.light .border-white\/20,
+html.light .border-white\/25,
+html.light .border-white\/30 {
+  border-color: rgba(15, 23, 42, 0.14) !important;
+}
+
+html.light .bg-white\/\[0\.02\],
+html.light .bg-white\/\[0\.03\],
+html.light .bg-white\/\[0\.04\],
+html.light .bg-white\/\[0\.05\],
+html.light .bg-white\/\[0\.06\],
+html.light .bg-white\/5 {
+  background-color: rgba(15, 23, 42, 0.04) !important;
+}
+
+html.light .bg-white\/\[0\.08\],
+html.light .bg-white\/10,
+html.light .bg-white\/15 {
+  background-color: rgba(15, 23, 42, 0.08) !important;
+}
+
+/* Ensure crimson primary CTAs retain white text */
+html.light .bg-red-600,
+html.light .bg-red-500,
+html.light button.bg-red-600 span,
+html.light button.bg-red-600,
+html.light button.bg-gradient-to-r span {
+  color: #ffffff !important;
+}
+
+html.light .text-red-500,
+html.light .text-red-400,
+html.light .text-\[\#ff2e2e\] {
+  color: #dc2626 !important;
+}
+
+/* Ensure navbar Get Started button has strong contrast in light mode */
+html.light header button.bg-white {
+  background-color: #0f172a !important;
+  color: #ffffff !important;
+}
+
+html.light header button.bg-white:hover {
+  background-color: #1e293b !important;
+}
