@@ -1068,66 +1068,7 @@ export const AboutPage: React.FC<AboutPageProps> = ({
       </main>
 
       {/* SECTION 10: SEMANTIC FOOTER */}
-      <footer
-        role="contentinfo"
-        className="pt-12 pb-8 border-t border-white/10 px-6 sm:px-10 lg:px-16 relative z-10 bg-black/40"
-      >
-        <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
-            <span className="font-bold text-white text-lg tracking-tight">
-              {content.footer.companyName}
-            </span>
-            <span className="hidden sm:inline text-neutral-600">·</span>
-            <span className="text-xs text-neutral-400">{content.footer.location}</span>
-            <span className="hidden sm:inline text-neutral-600">·</span>
-            <a
-              href={content.footer.phoneTel}
-              className="text-xs text-neutral-300 hover:text-white transition-colors"
-            >
-              {content.footer.phone}
-            </a>
-          </div>
-
-          <div className="flex items-center gap-5 text-xs text-neutral-400">
-            <button
-              type="button"
-              onClick={onNavigateHome}
-              className="hover:text-white transition-colors cursor-pointer"
-            >
-              Home
-            </button>
-            <button
-              type="button"
-              onClick={() => {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
-              className="text-white font-semibold cursor-pointer"
-            >
-              About
-            </button>
-            <button
-              type="button"
-              onClick={onNavigateToServices}
-              className="hover:text-white transition-colors cursor-pointer"
-            >
-              Services
-            </button>
-            <a
-              href={content.footer.whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-emerald-400 hover:text-emerald-300 transition-colors flex items-center gap-1"
-            >
-              <MessageCircle className="w-3.5 h-3.5" />
-              <span>WhatsApp</span>
-            </a>
-          </div>
-
-          <div className="text-xs text-neutral-500 font-mono text-center md:text-right">
-            {content.footer.copyright}
-          </div>
-        </div>
-      </footer>
+      
     </div>
   );
 };
